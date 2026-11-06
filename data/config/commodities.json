@@ -1,0 +1,169 @@
+{
+  "commodities": [
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "hindi_name": "टमाटर",
+      "marathi_name": "टोमॅटो",
+      "category": "vegetable",
+      "shelf_life_ambient_days": 6,
+      "shelf_life_cold_days": 24,
+      "cold_temp_celsius": 10.0,
+      "loss_parameters": {
+        "farm_level_baseline": 0.0837,
+        "market_level_baseline": 0.0325,
+        "total_baseline": 0.1162,
+        "logistic_k": 7.0,
+        "logistic_midpoint_ratio": 0.70,
+        "transit_loss_per_100km": 0.020,
+        "cold_storage_loss_per_day": 0.003
+      },
+      "grade_multipliers": {
+        "A": { "price": 1.10, "loss": 0.85, "label": "Grade A (Export / Supermarket)" },
+        "B": { "price": 0.95, "loss": 1.00, "label": "Grade B (Standard Mandi)" },
+        "C": { "price": 0.75, "loss": 1.30, "label": "Grade C (Local / Clearance)" }
+      },
+      "packaging_options": {
+        "crates": { "name": "Plastic Crates (20-25 kg)", "cost_per_qtl": 35.0, "loss_factor": 0.65 },
+        "gunny_bags": { "name": "Mesh / Gunny Bags (50 kg)", "cost_per_qtl": 18.0, "loss_factor": 1.00 },
+        "loose": { "name": "Loose Bulk Transport", "cost_per_qtl": 0.0, "loss_factor": 1.40 }
+      },
+      "processing_specs": {
+        "eligible": true,
+        "preferred_grades": ["A", "B"],
+        "min_brix": 5.0,
+        "pulp_recovery_ratio": 0.45,
+        "seasons": [
+          { "start_month": 8, "end_month": 10, "label": "Kharif Processing Window" },
+          { "start_month": 12, "end_month": 4, "label": "Rabi Processing Window" }
+        ],
+        "off_season_note": "May-July is off-season (processors switch lines to mango pulp)"
+      },
+      "source": "NABCONS Study for MoFPI (2020-22) Tomato 11.62% total loss (8.37% farm, 3.25% market); GIZ Processed Tomato Study (2016)",
+      "editable_in_ui": true
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "hindi_name": "प्याज़",
+      "marathi_name": "कांदा",
+      "category": "vegetable",
+      "shelf_life_ambient_days": 60,
+      "shelf_life_cold_days": 180,
+      "cold_temp_celsius": 0.5,
+      "loss_parameters": {
+        "farm_level_baseline": 0.0450,
+        "market_level_baseline": 0.0280,
+        "total_baseline": 0.0730,
+        "logistic_k": 5.0,
+        "logistic_midpoint_ratio": 0.80,
+        "transit_loss_per_100km": 0.005,
+        "cold_storage_loss_per_day": 0.0008
+      },
+      "grade_multipliers": {
+        "A": { "price": 1.15, "loss": 0.80, "label": "Grade A (Uniform 55mm+ Red Globe)" },
+        "B": { "price": 0.95, "loss": 1.00, "label": "Grade B (Medium 40-50mm)" },
+        "C": { "price": 0.70, "loss": 1.35, "label": "Grade C (Small / Bolters / Doubles)" }
+      },
+      "packaging_options": {
+        "crates": { "name": "Ventilated Plastic Crates", "cost_per_qtl": 30.0, "loss_factor": 0.70 },
+        "gunny_bags": { "name": "Leno / Jute Mesh Bags (50 kg)", "cost_per_qtl": 16.0, "loss_factor": 1.00 },
+        "loose": { "name": "Loose Bulk Transport", "cost_per_qtl": 0.0, "loss_factor": 1.25 }
+      },
+      "processing_specs": {
+        "eligible": true,
+        "preferred_grades": ["A", "B"],
+        "min_brix": 12.0,
+        "pulp_recovery_ratio": 0.18,
+        "seasons": [
+          { "start_month": 1, "end_month": 6, "label": "Rabi Onion Dehydration" }
+        ],
+        "off_season_note": "Monsoon kharif onions high moisture, unsuitable for dehydration"
+      },
+      "source": "NABCONS Study for MoFPI (2020-22) Onion 7.30% loss; ICAR-DOGR Rajgurunagar",
+      "editable_in_ui": true
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "hindi_name": "आलू",
+      "marathi_name": "बटाटा",
+      "category": "vegetable",
+      "shelf_life_ambient_days": 45,
+      "shelf_life_cold_days": 210,
+      "cold_temp_celsius": 3.0,
+      "loss_parameters": {
+        "farm_level_baseline": 0.0480,
+        "market_level_baseline": 0.0260,
+        "total_baseline": 0.0740,
+        "logistic_k": 5.0,
+        "logistic_midpoint_ratio": 0.80,
+        "transit_loss_per_100km": 0.006,
+        "cold_storage_loss_per_day": 0.0006
+      },
+      "grade_multipliers": {
+        "A": { "price": 1.12, "loss": 0.80, "label": "Grade A (Large 50mm+ Oval, Unblemished)" },
+        "B": { "price": 0.95, "loss": 1.00, "label": "Grade B (Medium Table Variety)" },
+        "C": { "price": 0.70, "loss": 1.30, "label": "Grade C (Small Seed/Chhatri Size)" }
+      },
+      "packaging_options": {
+        "crates": { "name": "Vented Plastic Crates", "cost_per_qtl": 30.0, "loss_factor": 0.75 },
+        "gunny_bags": { "name": "Hessian / Jute Gunny Bags (50 kg)", "cost_per_qtl": 18.0, "loss_factor": 1.00 },
+        "loose": { "name": "Loose Bulk Transport", "cost_per_qtl": 0.0, "loss_factor": 1.30 }
+      },
+      "processing_specs": {
+        "eligible": true,
+        "preferred_grades": ["A"],
+        "min_brix": 4.0,
+        "pulp_recovery_ratio": 0.25,
+        "seasons": [
+          { "start_month": 1, "end_month": 5, "label": "Rabi Chips & Flake Processing" }
+        ],
+        "off_season_note": "Stored cold potatoes accumulate reducing sugars unless reconditioned"
+      },
+      "source": "NABCONS (2020-22) Potato 7.4% loss; ICAR-CPRI Shimla",
+      "editable_in_ui": true
+    },
+    {
+      "id": "banana",
+      "name": "Banana (Grand Naine)",
+      "hindi_name": "केला",
+      "marathi_name": "केळी",
+      "category": "fruit",
+      "shelf_life_ambient_days": 10,
+      "shelf_life_cold_days": 45,
+      "cold_temp_celsius": 13.0,
+      "loss_parameters": {
+        "farm_level_baseline": 0.0520,
+        "market_level_baseline": 0.0380,
+        "total_baseline": 0.0900,
+        "logistic_k": 6.5,
+        "logistic_midpoint_ratio": 0.75,
+        "transit_loss_per_100km": 0.018,
+        "cold_storage_loss_per_day": 0.002
+      },
+      "grade_multipliers": {
+        "A": { "price": 1.15, "loss": 0.80, "label": "Grade A (Clean Hands, 7-8 hands/bunch, 75% mature)" },
+        "B": { "price": 0.95, "loss": 1.00, "label": "Grade B (Standard Domestic Mandi)" },
+        "C": { "price": 0.70, "loss": 1.35, "label": "Grade C (Local Ripened / Small Caliber)" }
+      },
+      "packaging_options": {
+        "crates": { "name": "Foam-Padded CFB Corrugated Boxes", "cost_per_qtl": 55.0, "loss_factor": 0.50 },
+        "gunny_bags": { "name": "Mesh / Perforated Sacks", "cost_per_qtl": 20.0, "loss_factor": 1.00 },
+        "loose": { "name": "Hanging Bunches Loose on Straw", "cost_per_qtl": 0.0, "loss_factor": 1.50 }
+      },
+      "processing_specs": {
+        "eligible": true,
+        "preferred_grades": ["B", "C"],
+        "min_brix": 18.0,
+        "pulp_recovery_ratio": 0.40,
+        "seasons": [
+          { "start_month": 1, "end_month": 12, "label": "Year-Round Pulping & Puree" }
+        ],
+        "off_season_note": "Year round availability in Jalgaon/Pune belt"
+      },
+      "source": "NABCONS (2020-22) Fruit loss range 6.02-15.05%; Banana 45-day cold shelf life evidence at 13°C (75% maturity)",
+      "editable_in_ui": true
+    }
+  ]
+}

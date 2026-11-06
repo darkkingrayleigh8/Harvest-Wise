@@ -1,0 +1,69 @@
+{
+  "general": {
+    "currency_symbol": "₹",
+    "quintal_to_kg": 100.0,
+    "max_cold_storage_search_radius_km": 40.0,
+    "max_coop_search_radius_km": 30.0,
+    "coop_date_window_days": 2,
+    "waiting_capital_interest_annual_pct": 12.0,
+    "default_cash_urgency_days": 7,
+    "risk_aversion_lambda_default": 0.50
+  },
+  "mandi_costs": {
+    "default_mandi_cess_pct": 1.0,
+    "default_commission_agent_pct": 4.0,
+    "weighing_and_handling_per_qtl": 8.0,
+    "payment_delay_days_local": 1,
+    "payment_delay_days_distant": 2
+  },
+  "storage_costs": {
+    "default_ambient_rent_per_qtl_day": 0.85,
+    "default_cold_rent_per_qtl_day": 2.50,
+    "default_in_out_handling_per_qtl": 20.0
+  },
+  "simulation": {
+    "monte_carlo_draws": 2000,
+    "random_seed": 42,
+    "beta_spoilage_variance_ratio": 0.15,
+    "heavy_tail_df": 4
+  },
+  "sources": [
+    {
+      "id": "nabcons_2022",
+      "title": "Study on Determining Post-Harvest Losses of Agri-Produces in India",
+      "author": "NABCONS (NABARD Consultancy Services) for Ministry of Food Processing Industries (MoFPI)",
+      "year": 2022,
+      "details": "Examined 54 commodities across 84 agro-climatic zones (2020-22). National annual loss Rs 1.53 lakh crore. Fruit losses: 6.02-15.05%, Vegetables: 4.87-11.61%. Tomato total loss 11.62% (8.37% farm level, 3.25% market level). Guava: 15.05%. Discredited the myth of '20% of all produce rots'."
+    },
+    {
+      "id": "icar_ciphet_2015",
+      "title": "Assessment of Quantitative Harvest and Post-Harvest Losses of Major Crops and Commodities in India",
+      "author": "ICAR-CIPHET (Central Institute of Post-Harvest Engineering and Technology, Ludhiana)",
+      "year": 2015,
+      "details": "Earlier nationwide study documenting post-harvest losses: Fruits 6.70-15.88%, Vegetables 7.32-12.44%."
+    },
+    {
+      "id": "giz_tomato_2016",
+      "title": "Value Chain Analysis of Processed Tomato in India",
+      "author": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit) & MoFPI",
+      "year": 2016,
+      "details": "Processing economics: target raw price Rs 4.5/kg (Rs 450/qtl); mandi typical Rs 6-10/kg crashing to Rs 0.5-2/kg in glut; quality specs TSS 5-6 Brix, acidity >=0.4%, pH <4.5, pulp recovery 40-50%. Processing windows Aug-Oct and Dec-Apr; May-July off-season."
+    },
+    {
+      "id": "kolar_volatility_study",
+      "title": "Price Volatility and Arrival Dynamics of Tomato in Karnataka APMC Markets",
+      "author": "Agricultural Economics Research Review",
+      "year": 2018,
+      "details": "Documented weekly price CV of ~77%, arrivals CV of ~102%, and positive price skewness of 2.7. Documented bimodal annual arrivals and shifting seasonal peaks."
+    },
+    {
+      "id": "ceda_agmarknet",
+      "title": "CEDA Agmarknet Daily Wholesale Prices and Arrivals Data Portal",
+      "author": "Centre for Economic Data and Analysis (Ashoka University) / Directorate of Marketing & Inspection",
+      "year": 2024,
+      "details": "Historical wholesale prices and arrivals for ~344 commodities and ~4,000 mandis across India from 2001 to present."
+    }
+  ],
+  "disclaimer": "HarvestWise provides probabilistic decision support and risk scenarios based on statistical models and localized cost assumptions. It does not constitute financial advice or contract guarantees. Actual realized mandi prices, quality grading, and transit conditions are subject to real-world market volatility.",
+  "editable_in_ui": true
+}

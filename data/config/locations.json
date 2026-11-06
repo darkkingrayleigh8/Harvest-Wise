@@ -1,0 +1,201 @@
+{
+  "demo_farmer_origin": {
+    "id": "junnar_village",
+    "name": "Otur / Junnar Cluster",
+    "district": "Pune",
+    "state": "Maharashtra",
+    "lat": 19.208,
+    "lon": 73.876
+  },
+  "markets": [
+    {
+      "id": "mkt_junnar",
+      "name": "Junnar APMC Mandi",
+      "district": "Pune",
+      "lat": 19.206,
+      "lon": 73.882,
+      "market_type": "local_rural_apmc",
+      "mandi_fee_pct": 1.0,
+      "commission_fee_pct": 4.0,
+      "loading_cost_per_qtl": 12.0,
+      "is_local_default": true
+    },
+    {
+      "id": "mkt_narayangaon",
+      "name": "Narayangaon Tomato APMC",
+      "district": "Pune",
+      "lat": 19.123,
+      "lon": 73.978,
+      "market_type": "regional_commodity_hub",
+      "mandi_fee_pct": 1.0,
+      "commission_fee_pct": 4.0,
+      "loading_cost_per_qtl": 14.0,
+      "is_local_default": false
+    },
+    {
+      "id": "mkt_khed",
+      "name": "Khed (Chakan) APMC",
+      "district": "Pune",
+      "lat": 18.845,
+      "lon": 73.902,
+      "market_type": "semi_urban_apmc",
+      "mandi_fee_pct": 1.0,
+      "commission_fee_pct": 4.0,
+      "loading_cost_per_qtl": 14.0,
+      "is_local_default": false
+    },
+    {
+      "id": "mkt_pune",
+      "name": "Pune Gultekdi Market Yard",
+      "district": "Pune",
+      "lat": 18.496,
+      "lon": 73.868,
+      "market_type": "metro_terminal_market",
+      "mandi_fee_pct": 1.05,
+      "commission_fee_pct": 4.5,
+      "loading_cost_per_qtl": 18.0,
+      "is_local_default": false
+    },
+    {
+      "id": "mkt_shirur",
+      "name": "Shirur APMC",
+      "district": "Pune",
+      "lat": 18.826,
+      "lon": 74.375,
+      "market_type": "district_apmc",
+      "mandi_fee_pct": 1.0,
+      "commission_fee_pct": 4.0,
+      "loading_cost_per_qtl": 13.0,
+      "is_local_default": false
+    },
+    {
+      "id": "mkt_baramati",
+      "name": "Baramati APMC",
+      "district": "Pune",
+      "lat": 18.151,
+      "lon": 74.577,
+      "market_type": "southern_apmc",
+      "mandi_fee_pct": 1.0,
+      "commission_fee_pct": 4.0,
+      "loading_cost_per_qtl": 14.0,
+      "is_local_default": false
+    }
+  ],
+  "storage_facilities": [
+    {
+      "id": "cold_chakan",
+      "name": "Chakan Multi-Commodity Cold Chain Hub",
+      "type": "cold_storage",
+      "lat": 18.760,
+      "lon": 73.860,
+      "total_capacity_qtl": 15000,
+      "available_capacity_qtl": 6200,
+      "supported_commodities": ["tomato", "potato", "onion", "banana"],
+      "rent_per_qtl_day": 2.50,
+      "handling_in_out_per_qtl": 20.0,
+      "temperature_celsius": 10.0,
+      "source": "assumption — verify locally"
+    },
+    {
+      "id": "cold_hadapsar",
+      "name": "Pune Agro-Tech Controlled Atmosphere Store",
+      "type": "cold_storage",
+      "lat": 18.502,
+      "lon": 73.931,
+      "total_capacity_qtl": 25000,
+      "available_capacity_qtl": 12000,
+      "supported_commodities": ["tomato", "potato", "onion", "banana"],
+      "rent_per_qtl_day": 3.00,
+      "handling_in_out_per_qtl": 25.0,
+      "temperature_celsius": 8.0,
+      "source": "assumption — verify locally"
+    },
+    {
+      "id": "ambient_junnar",
+      "name": "Junnar Taluka Farmers Warehouse",
+      "type": "ambient_godown",
+      "lat": 19.215,
+      "lon": 73.890,
+      "total_capacity_qtl": 8000,
+      "available_capacity_qtl": 3500,
+      "supported_commodities": ["onion", "potato"],
+      "rent_per_qtl_day": 0.85,
+      "handling_in_out_per_qtl": 10.0,
+      "temperature_celsius": 26.0,
+      "source": "assumption — verify locally"
+    }
+  ],
+  "processors": [
+    {
+      "id": "proc_sahyadri",
+      "name": "Sahyadri Agro Processing Plant (Manchar)",
+      "lat": 19.006,
+      "lon": 73.940,
+      "target_commodity": "tomato",
+      "moq_qtl": 100,
+      "price_rule": {
+        "pricing_model": "fixed_floor_or_percent_modal",
+        "fixed_price_per_kg": 4.50,
+        "floor_price_per_qtl": 450.0,
+        "contract_percent_of_modal": 85.0
+      },
+      "accepted_grades": ["A", "B"],
+      "requires_processing_variety": true,
+      "payment_terms_days": 5,
+      "quality_deduction_pct_per_c_grade": 20.0,
+      "rejection_risk_rate": 0.04,
+      "operating_seasons": [
+        { "start_month": 8, "end_month": 10 },
+        { "start_month": 12, "end_month": 4 }
+      ],
+      "source": "GIZ Processed Tomato Study (2016) Rs 4.5/kg base processor price; 40-50% pulp recovery"
+    },
+    {
+      "id": "proc_pune_foodpark",
+      "name": "Western Maharashtra Mega Food Park",
+      "lat": 18.320,
+      "lon": 74.150,
+      "target_commodity": "tomato",
+      "moq_qtl": 150,
+      "price_rule": {
+        "pricing_model": "fixed_contract",
+        "fixed_price_per_kg": 4.80,
+        "floor_price_per_qtl": 480.0,
+        "contract_percent_of_modal": 80.0
+      },
+      "accepted_grades": ["A", "B"],
+      "requires_processing_variety": true,
+      "payment_terms_days": 7,
+      "quality_deduction_pct_per_c_grade": 25.0,
+      "rejection_risk_rate": 0.05,
+      "operating_seasons": [
+        { "start_month": 8, "end_month": 10 },
+        { "start_month": 12, "end_month": 4 }
+      ],
+      "source": "assumption — verify locally"
+    },
+    {
+      "id": "proc_onion_dehydrators",
+      "name": "Nashik-Pune Dehydrated Flakes Pvt Ltd",
+      "lat": 19.340,
+      "lon": 73.980,
+      "target_commodity": "onion",
+      "moq_qtl": 80,
+      "price_rule": {
+        "pricing_model": "fixed_contract",
+        "fixed_price_per_kg": 13.50,
+        "floor_price_per_qtl": 1350.0,
+        "contract_percent_of_modal": 90.0
+      },
+      "accepted_grades": ["A", "B"],
+      "requires_processing_variety": false,
+      "payment_terms_days": 10,
+      "quality_deduction_pct_per_c_grade": 15.0,
+      "rejection_risk_rate": 0.03,
+      "operating_seasons": [
+        { "start_month": 1, "end_month": 6 }
+      ],
+      "source": "assumption — verify locally"
+    }
+  ]
+}

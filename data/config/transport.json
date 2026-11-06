@@ -1,0 +1,33 @@
+{
+  "road_distance_factor": 1.30,
+  "default_loading_unloading_per_qtl": 14.0,
+  "cold_chain_multiplier": 1.45,
+  "truck_types": [
+    {
+      "id": "small_pickup",
+      "name": "Tata Ace / Bolero Camper",
+      "capacity_qtl": 15,
+      "fixed_base_fee": 650.0,
+      "rate_per_km": 19.0,
+      "reefer_available": false
+    },
+    {
+      "id": "medium_lcv",
+      "name": "Eicher / Ashok Leyland LCV (3.5T)",
+      "capacity_qtl": 35,
+      "fixed_base_fee": 1250.0,
+      "rate_per_km": 26.0,
+      "reefer_available": true
+    },
+    {
+      "id": "heavy_truck",
+      "name": "Consolidated 6-Wheeler (9T)",
+      "capacity_qtl": 90,
+      "fixed_base_fee": 2600.0,
+      "rate_per_km": 39.0,
+      "reefer_available": true
+    }
+  ],
+  "source": "assumption — verify locally (Local Pune Rural Transport Union rates 2024)",
+  "editable_in_ui": true
+}
