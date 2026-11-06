@@ -1,4 +1,4 @@
-# HarvestWise (AGR-06)
+# HarvestWise
 **Store, Sell or Process: Post-Harvest Decision Intelligence Engine for Perishables**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
